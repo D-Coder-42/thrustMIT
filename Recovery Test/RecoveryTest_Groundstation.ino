@@ -5,7 +5,7 @@
 #define TX_RYLR       6 // CONNECT RX OF RYLR TO THIS
 
 SoftwareSerial RYLR (RX_RYLR, TX_RYLR);
-String data,transmit;
+String data,transmit,response;
 
 void sendData(String data) {
   transmit = "AT+SEND=0," + String(data.length()) + "," + data + "\r\n";
